@@ -1,0 +1,296 @@
+.page-body {
+  margin: 0;
+  min-width: 320px;
+  background: #e7e7e7;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0079bf;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 66px;
+  padding: 0 20px;
+  background: #0067a3;
+  box-sizing: border-box;
+}
+
+.header__title {
+  margin: 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.user-menu__avatar {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.user-menu__arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.user-menu__list {
+  position: absolute;
+  z-index: 2;
+  top: 44px;
+  right: 0;
+  width: 122px;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  list-style: none;
+}
+
+.user-menu__item {
+  padding: 5px 11px;
+  font-size: 14px;
+}
+
+.user-menu__item:hover {
+  background: #e7f1f9;
+  color: #0067a3;
+}
+
+.app-main {
+  flex: 1;
+  padding: 20px 18px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 17px;
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: calc(100vh - 150px);
+  padding: 12px 9px 9px;
+  overflow-y: auto;
+  border-radius: 9px;
+  background: #ebecf0;
+  box-sizing: border-box;
+}
+
+.column__title {
+  margin: 0;
+  padding: 0 0 1px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.column__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-card {
+  display: block;
+  padding: 9px 8px;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.task-card:hover {
+  background: #f3f8fb;
+  color: #0067a3;
+}
+
+.column__input,
+.column__select {
+  width: 100%;
+  padding: 9px 8px;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.column__input:focus,
+.column__select:focus,
+.task-details__description:focus {
+  outline: 2px solid #0067a3;
+}
+
+.column__button {
+  align-self: flex-start;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: #5e6c84;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.column__button:hover {
+  color: #0067a3;
+}
+
+.column__button--disabled,
+.column__button:disabled {
+  color: #a7adb8;
+  cursor: default;
+}
+
+.column__button--disabled:hover,
+.column__button:disabled:hover {
+  color: #a7adb8;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 20px;
+  background: #0067a3;
+  color: #fff;
+  font-size: 15px;
+}
+
+.footer__counts {
+  display: flex;
+  gap: 36px;
+}
+
+.task-details {
+  position: relative;
+  min-height: calc(100vh - 150px);
+  padding: 22px 26px;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.task-details__title {
+  max-width: calc(100% - 55px);
+  margin: 0 0 28px;
+  font-size: 25px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.task-details__close {
+  position: absolute;
+  top: 9px;
+  right: 17px;
+  color: #000;
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.task-details__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.task-details__description {
+  display: block;
+  width: min(100%, 680px);
+  min-height: 180px;
+  padding: 10px;
+  border: 1px solid #b8c0cc;
+  border-radius: 5px;
+  font: inherit;
+  line-height: 1.35;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.task-details__save {
+  margin-top: 14px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 4px;
+  background: #0067a3;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.task-details__save:hover {
+  background: #005582;
+}
+
+@media (max-width: 800px) {
+  .header {
+    min-height: 58px;
+    padding: 0 13px;
+  }
+
+  .header__title {
+    font-size: 21px;
+  }
+
+  .app-main {
+    padding: 18px 13px;
+  }
+
+  .board {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .column {
+    max-height: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 13px;
+  }
+
+  .footer__counts {
+    gap: 18px;
+  }
+
+  .task-details {
+    min-height: calc(100vh - 174px);
+    padding: 22px 18px;
+  }
+}
