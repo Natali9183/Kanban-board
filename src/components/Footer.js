@@ -4,6 +4,6 @@ export const Footer = ({ activeTasks, finishedTasks }) => (
       <span>Active tasks: {activeTasks}</span>
       <span>Finished tasks: {finishedTasks}</span>
     </div>
-    <span>Kanban board by Денис, 2026</span>
+    <span>Kanban board by Nataly, 2026</span>
   </footer>
 );
